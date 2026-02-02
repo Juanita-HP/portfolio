@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Request Resume | Juanita</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Royal Security Animations */
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-12px); }
+            50% { transform: translateX(12px); }
+            75% { transform: translateX(-12px); }
+            100% { transform: translateX(0); }
+        }
+        .wiggle { animation: shake 0.4s ease-in-out; }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="nav-links">
+            <li class="nav-item"><a href="index.html" class="blue">Home</a></li>
+            <li class="nav-item"><a href="experience.html" class="green">Experience</a></li>
+            <li class="nav-item"><a href="certificates.html" class="purple">Certificates</a></li>
+            <li class="nav-item active"><a href="resume.html" class="pink">Resume</a></li>
+            <li class="nav-item"><a href="https://github.com/Juanita-HP" target="_blank" class="red">GitHub</a></li>
+            <li class="nav-item"><a href="https://www.linkedin.com/in/juana-v-h-679a68220/" target="_blank" class="yellow">LinkedIn</a></li>
+        </ul>
+    </nav>
+
+    <main class="home-main">
+        <div class="form-container fade-in" id="mainContainer">
+            <h1 style="color: #fff; margin-bottom: 10px;">Access Credentials</h1>
+            <p style="color: #8b949e; margin-bottom: 30px;">Please complete the form below to request access to my resume.</p>
+
+            <form id="resumeForm" action="https://formspree.io/f/mrelkekq" method="POST">
+                
+                <input type="hidden" name="_next" value="thanks.html">
+
+                <div class="form-group">
+                    <label>Your Name (Mandatory)</label>
+                    <input type="text" name="name" id="userName" required placeholder="Full Name">
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address (Mandatory)</label>
+                    <input type="email" name="email" required placeholder="email@company.com">
+                </div>
+
+                <div class="form-group">
+                    <label>Phone Number (Optional)</label>
+                    <input type="tel" name="phone" placeholder="+1 (xxx) xxx-xxxx">
+                </div>
+
+                <div class="form-group">
+                    <label>LinkedIn Profile URL (Mandatory)</label>
+                    <input type="url" name="linkedin" required placeholder="https://www.linkedin.com/in/yourprofile">
+                </div>
+
+                <div class="form-group">
+                    <label>Company (Mandatory)</label>
+                    <input type="text" name="company" id="companyName" required placeholder="Organization Name">
+                </div>
+
+                <div class="form-group">
+                    <label>Purpose of Request (Mandatory)</label>
+                    <textarea name="purpose" id="purposeText" rows="4" required placeholder="Describe the opportunity..."></textarea>
+                </div>
+
+                <input type="text" name="_gotcha" style="display:none">
+
+                <button type="submit" class="submit-btn">SEND REQUEST</button>
+            </form>
+            
+            <p id="moderatorWarning" style="color: #ff7b72; margin-top: 20px; display: none; font-weight: bold; text-align: center; border: 1px solid #ff7b72; padding: 10px; border-radius: 6px; background: rgba(255, 123, 114, 0.1);">
+                ACCESS DENIED: Unprofessional language detected. Please revise your submission.
+            </p>
+        </div>
+    </main>
+
+    <script>
+        const form = document.getElementById('resumeForm');
+        const warning = document.getElementById('moderatorWarning');
+        const container = document.getElementById('mainContainer');
+        
+        // --- THE CRAZY ASS MODERATOR (GLOBAL DEFENSE) ---
+        const royalGuard = [
+            // Slur Detection (Advanced phonetic & character-swap variations)
+            /\b[n|ñ|r][i|1|!|l|y][g|9|q]{2,}[a|e|3|r|4|x|@|o]+\b/i,
+            
+            // Global Profanity (English/Spanish/Leet-speak)
+            /\b(f[u|v|ü|*]ck|sh[i|1|!]t|b[i|1]tch|p[u|v]ssy|d[i|1]ck|assh[o|0]le|c[u|v]nt)\b/i,
+            /\b(p[u|v]t[a|o]|m[i|1]erd[a|e]|p[e|3]nd[e|3]j|ch[i|1]ngar|c[u|v]l[o|0])\b/i,
+            
+            // Gibberish, Bot Mashes, & Repeating Garbage
+            /\b([a-z])\1{4,}\b/i,           
+            /\b[b-df-hj-np-tv-z]{6,}\b/i,   
+            /[0-9]{8,}/,                    
+            
+            // Disrespectful Trolling & Offensive Adjectives
+            /\b(troll|stupid|idiot|dumb|hate|kill|die|ugly|fat|stink|niggrr)\b/i
+        ];
+
+        form.addEventListener('submit', (e) => {
+            const name = document.getElementById('userName').value;
+            const company = document.getElementById('companyName').value;
+            const purpose = document.getElementById('purposeText').value;
+            
+            // Royal Scan of all submitted text
+            const combinedText = (name + " " + company + " " + purpose).toLowerCase();
+
+            const isIntruder = royalGuard.some(regex => regex.test(combinedText));
+
+            if (isIntruder) {
+                e.preventDefault(); 
+                
+                // Trigger Warning & Security Wiggle
+                warning.style.display = 'block';
+                container.classList.add('wiggle');
+                
+                setTimeout(() => {
+                    container.classList.remove('wiggle');
+                }, 400);
+
+                console.warn("Royal Guard Neutralized: Unauthorized input blocked.");
+                return false;
+            }
+        });
+    </script>
+</body>
+</html>

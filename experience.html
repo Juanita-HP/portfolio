@@ -1,0 +1,68 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Experience | Juanita</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul class="nav-links">
+            <li class="nav-item"><a href="index.html" class="blue">Home</a></li>
+            <li class="nav-item"><a href="#" class="orange">Projects</a></li>
+            <li class="nav-item active"><a href="experience.html" class="green">Experience</a></li>
+            <li class="nav-item"><a href="certificates.html" class="purple">Certificates</a></li>
+            <li class="nav-item"><a href="https://github.com/Juanita-HP" target="_blank" class="red">GitHub</a></li>
+            <li class="nav-item"><a href="https://www.linkedin.com/in/juana-v-h-679a68220/" target="_blank" class="yellow">LinkedIn</a></li>
+        </ul>
+    </nav>
+
+    <main class="exp-main">
+        <header style="text-align: center; margin-bottom: 40px;">
+            <h1 style="font-size: 4rem; color: #fff;">Technical Domain</h1>
+            <p style="font-size: 1.2rem; color: #8b949e;">Architecting systems and training neural networks.</p>
+        </header>
+
+        <div class="terminal-window" id="experienceTerminal">
+            <div class="terminal-bar">
+                <div class="buttons">
+                    <span class="close"></span>
+                    <span class="minimize"></span>
+                    <span class="maximize"></span>
+                </div>
+                <div class="title">experience.py</div>
+            </div>
+            <div class="terminal-body">
+<pre>
+<span class="keyword">def</span> <span class="function">build_experience</span>():
+    <span class="comment"># internships, research, hands-on roles</span>
+    <span class="variable">skills</span> = [<span class="string">"systems"</span>, <span class="string">"ml"</span>, <span class="string">"software"</span>]
+    <span class="variable">status</span> = <span class="string">"in_progress"</span>
+    <span class="keyword">return</span> {<span class="string">"skills"</span>: <span class="variable">skills</span>, <span class="string">"status"</span>: <span class="variable">status</span>}
+
+<span class="function">print</span>(<span class="string">"shipping experience updates soon..."</span>)
+</pre>
+            </div>
+        </div>
+
+        <button class="poke-btn" id="pokeButton">Poke the 🐍</button>
+        <p class="footer-note" id="statusNote">You caught me optimizing for industry-level performance.</p>
+    </main>
+
+    <script>
+        const btn = document.getElementById('pokeButton');
+        const note = document.getElementById('statusNote');
+        const term = document.getElementById('experienceTerminal');
+        btn.addEventListener('click', () => {
+            note.innerText = "HISSS! building intelligence, one line at a time";
+            note.style.color = "#3fb950";
+            term.classList.add('wiggle');
+            setTimeout(() => {
+                term.classList.remove('wiggle');
+                note.innerText = "You caught me optimizing for industry-level performance.";
+                note.style.color = "#8b949e";
+            }, 600);
+        });
+    </script>
+</body>
+</html>
