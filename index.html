@@ -2,32 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juanita | AI & ML Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .home-main {
+            height: calc(100vh - 70px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+        .profile-img {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center 20%;
+            border: 3px solid #ff79c6;
+            display: block;
+            margin: 0 auto;
+            box-shadow: 0 0 30px rgba(255,121,198,0.5);
+            background-color: #0d1117;
+        }
+        .content h1 { font-size: 3.8rem; color: #fff; margin-bottom: 6px; }
+        .content h2 { font-size: 1.6rem; color: #8b949e; margin-bottom: 18px; }
+        .content p {
+            max-width: 820px;
+            font-size: 1.05rem;
+            text-align: justify;
+            margin: 0 auto;
+            color: #c9d1d9;
+            line-height: 1.8;
+        }
+    </style>
 </head>
 <body>
     <nav>
         <ul class="nav-links">
-            <li class="nav-item active"><a href="index.html" class="blue">Home</a></li>
-            <li class="nav-item"><a href="projects.html" class="orange">Projects</a></li>
-            <li class="nav-item"><a href="experience.html" class="green">Experience</a></li>
-            <li class="nav-item"><a href="certificates.html" class="purple">Certificates</a></li>
-            <li class="nav-item"><a href="resume.html" class="pink">Resume</a></li>
-            <li class="nav-item"><a href="https://github.com/Juanita-HP" target="_blank" class="red">GitHub</a></li>
-            <li class="nav-item"><a href="https://www.linkedin.com/in/juana-v-h-679a68220/" target="_blank" class="yellow">LinkedIn</a></li>
+            <li class="nav-item active" style="--i:1"><a href="index.html" class="blue">Home</a></li>
+            <li class="nav-item" style="--i:2"><a href="projects.html" class="orange">Projects</a></li>
+            <li class="nav-item" style="--i:3"><a href="experience.html" class="green">Experience</a></li>
+            <li class="nav-item" style="--i:4"><a href="certificates.html" class="purple">Certificates</a></li>
+            <li class="nav-item" style="--i:5"><a href="resume.html" class="pink">Resume</a></li>
+            <li class="nav-item" style="--i:6"><a href="https://github.com/Juanita-HP" target="_blank" class="red">GitHub</a></li>
+            <li class="nav-item" style="--i:7"><a href="https://www.linkedin.com/in/juanita-hp/" target="_blank" class="yellow">LinkedIn</a></li>
         </ul>
     </nav>
-
     <main class="home-main">
-    <div class="hero-image-container">
-        <img src="./assets/images/projects/royal-portrait.jpg" alt="Your Majesty" class="profile-img">
-    </div>
-
-    <section class="content">
-        <h1>Juanita</h1>
-        <h2>AI & ML Engineer</h2>
-        <p>
-           Welcome to my digital portfolio. I am Juanita, a computer science student specializing in artificial intelligence, machine learning, and mathematics. I build technical expertise through hands-on projects, hackathons and active engagement in computer science events. I am currently a member of SCS Concordia and president of the Quantum Computing Club Concordia. 
-        </p>
-    </section>
-</main>
+        <div class="hero-image-container">
+            <img src="./assets/images/projects/royal-portrait.jpg" alt="Juanita - AI & ML Engineer" class="profile-img">
+        </div>
+        <section class="content">
+            <h1>Juanita</h1>
+            <h2>AI & ML Engineer</h2>
+            <p>Welcome to my digital portfolio. I am Juanita, a computer science student specializing in artificial intelligence, machine learning, and mathematics. I build technical expertise through hands-on projects, hackathons and active engagement in computer science events. I am currently a member of SCS Concordia and president of the Quantum Computing Club Concordia.</p>
+        </section>
+    </main>
+</body>
+</html>
