@@ -2,40 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Juanita</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .dots-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0;
+            background-color: #161b22;
+            gap: 6px;
+        }
+        .dot {
+            height: 6px;
+            width: 6px;
+            background-color: #484f58;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+        .dot.active { background-color: #ffb86c; }
+    </style>
 </head>
 <body>
     <nav>
         <ul class="nav-links">
-            <li class="nav-item"><a href="index.html" class="blue">Home</a></li>
-            <li class="nav-item active"><a href="projects.html" class="orange">Projects</a></li>
-            <li class="nav-item"><a href="experience.html" class="green">Experience</a></li>
-            <li class="nav-item"><a href="certificates.html" class="purple">Certificates</a></li>
-            <li class="nav-item"><a href="resume.html" class="pink">Resume</a></li>
-            <li class="nav-item"><a href="https://github.com/Juanita-HP" target="_blank" class="red">GitHub</a></li>
-            <li class="nav-item"><a href="https://www.linkedin.com/in/juana-v-h-679a68220/" target="_blank" class="yellow">LinkedIn</a></li>
+            <li class="nav-item" style="--i:1"><a href="index.html" class="blue">Home</a></li>
+            <li class="nav-item active" style="--i:2"><a href="projects.html" class="orange">Projects</a></li>
+            <li class="nav-item" style="--i:3"><a href="experience.html" class="green">Experience</a></li>
+            <li class="nav-item" style="--i:4"><a href="certificates.html" class="purple">Certificates</a></li>
+            <li class="nav-item" style="--i:5"><a href="resume.html" class="pink">Resume</a></li>
+            <li class="nav-item" style="--i:6"><a href="https://github.com/Juanita-HP" target="_blank" class="red">GitHub</a></li>
+            <li class="nav-item" style="--i:7"><a href="https://www.linkedin.com/in/juanita-hp/" target="_blank" class="yellow">LinkedIn</a></li>
         </ul>
     </nav>
 
     <main class="projects-container">
-        
+
         <div class="project-card">
             <div class="project-header">My Personal Portfolio Website</div>
-            
-            <div class="image-carousel">
+            <div class="image-carousel" id="carousel-1">
                 <img src="assets/images/projects/my-website-1.jpg" alt="Blueprint">
                 <img src="assets/images/projects/my-website-2.jpg" alt="VS Code UI">
                 <img src="assets/images/projects/my-website-3.jpg" alt="Final Result">
                 <img src="assets/images/projects/my-website-4.jpg" alt="Details">
             </div>
-
-            <div class="dots-container">
-  <span class="dot" onclick="scrollToProject(0)"></span>
-  <span class="dot" onclick="scrollToProject(1)"></span>
-  <span class="dot" onclick="scrollToProject(2)"></span>
-  <span class="dot" onclick="scrollToProject(3)"></span>
-</div>
+            <div class="dots-container" id="dots-1">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
             <div class="project-content">
                 <div class="tag-container">
                     <span class="tag">HTML</span>
@@ -43,42 +65,56 @@
                     <span class="tag">JavaScript</span>
                     <span class="tag">UI/UX</span>
                 </div>
-                
                 <div class="project-date">JANUARY 28, 2026</div>
-
-                <p class="project-description">
-                    Built my personal portfolio website entirely from scratch. As a first-year CS student, I planned everything with handwritten roadmaps, then brought it to life in VS Code, end to end. Featuring GitHub-dark vibes, smooth transitions, and multiple pages (Home, Projects, Experience, Certificates).
-                </p>
+                <p class="project-description">Built my personal portfolio website entirely from scratch. As a first-year CS student, I planned everything with handwritten roadmaps, then brought it to life in VS Code, end to end. Featuring GitHub-dark vibes, smooth transitions, and multiple pages (Home, Projects, Experience, Certificates).</p>
             </div>
         </div>
 
         <div class="project-card">
             <div class="project-header">Hello World: First Coding Competition</div>
-            
-            <div class="image-carousel">
+            <div class="image-carousel" id="carousel-2">
                 <img src="assets/images/projects/hello-world-competition-1.png" alt="Competition Env">
                 <img src="assets/images/projects/hello-world-competition-2.jpg" alt="Team Work">
             </div>
-
-            <div class="carousel-dots">
+            <div class="dots-container" id="dots-2">
                 <span class="dot active"></span>
                 <span class="dot"></span>
             </div>
-
             <div class="project-content">
                 <div class="tag-container">
                     <span class="tag">Algorithms</span>
                     <span class="tag">Debugging</span>
                     <span class="tag">HackerRank</span>
                 </div>
-
                 <div class="project-date">OCTOBER 11, 2025</div>
-                
-                <p class="project-description">
-                    The Hello World competition marked my first formal programming challenge. I solved algorithmic riddles under time constraints and submitted solutions via HackerRank, demonstrating my ability to perform under pressure in a collaborative environment.
-                </p>
+                <p class="project-description">The Hello World competition marked my first formal programming challenge. I solved algorithmic riddles under time constraints and submitted solutions via HackerRank, demonstrating my ability to perform under pressure in a collaborative environment.</p>
             </div>
         </div>
+
+    </main>
+
+    <script>
+        function initCarousel(carouselId, dotsId) {
+            const carousel = document.getElementById(carouselId);
+            const dots = document.getElementById(dotsId).querySelectorAll('.dot');
+
+            carousel.addEventListener('scroll', () => {
+                const index = Math.round(carousel.scrollLeft / carousel.offsetWidth);
+                dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+            });
+
+            dots.forEach((dot, i) => {
+                dot.addEventListener('click', () => {
+                    carousel.scrollTo({ left: i * carousel.offsetWidth, behavior: 'smooth' });
+                });
+            });
+        }
+
+        initCarousel('carousel-1', 'dots-1');
+        initCarousel('carousel-2', 'dots-2');
+    </script>
+</body>
+</html>
 
     </main>
 </body>
