@@ -141,11 +141,12 @@
             margin-bottom: 8px;
         }
 
+        /* TITLE — enlarged for balance */
         .hack-name {
-            font-size: 1.35rem;
+            font-size: 1.9rem;
             font-weight: 700;
             color: #fff;
-            line-height: 1.3;
+            line-height: 1.2;
             flex: 1;
         }
 
@@ -230,15 +231,7 @@
             margin-bottom: 20px;
         }
 
-        /* Skills */
-        .hack-skills-label {
-            font-size: 0.65rem;
-            letter-spacing: 2px;
-            color: #39d5ff;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-            font-weight: 700;
-        }
+        /* Skills — no label, just tags */
         .hack-skills {
             display: flex;
             flex-wrap: wrap;
@@ -275,6 +268,7 @@
             .hack-header h1 { font-size: 2rem; }
             .hack-top-row { flex-direction: column; }
             .hack-badges { align-items: flex-start; }
+            .hack-name { font-size: 1.5rem; }
         }
     </style>
 </head>
@@ -310,10 +304,10 @@
              4. Change the counter id to match (counter-track-2)
              5. Update name, date, organizer, description, skills
              6. Choose ONE rank-badge class:
-                - rank-winner    → 🏆 Winner
-                - rank-top3      → 🥈 Top 3
-                - rank-finalist  → 🎯 Finalist
-                - rank-participant → Participant
+                - rank-winner     → 🏆 Winner
+                - rank-top3       → 🥈 Top 3
+                - rank-finalist   → 🎯 Finalist
+                - rank-participant → ⚡ Participant
         ══════════════════════════════════════════════ -->
 
         <!-- HACKATHON 1 — SHREKATHON -->
@@ -336,33 +330,28 @@
                     <div class="hack-name">Shrekathon</div>
                     <div class="hack-badges">
                         <div class="hack-date-badge">20-22 MARCH 2026</div>
-                        <!-- RANKING BADGE — change class to: rank-winner / rank-top3 / rank-finalist / rank-participant -->
-                        <div class="rank-badge rank-participant">🏆 Winner</div>
+                        <div class="rank-badge rank-winner">🏆 Winner</div>
                     </div>
                 </div>
                 <div class="hack-organizer">Organized by: Concordia Game Dev Club / Concordia University</div>
                 <div class="hack-divider"></div>
                 <p class="hack-desc">
-                Built during a 48-hour game jam by a team of two, Jiejun and me, this project challenged us to create and launch a fully playable game from scratch in a Shrek-inspired universe. Our game, Shrek: 7 Layers Onion, went on to win Best Themed Game, reflecting both creative execution and strong technical problem-solving under pressure.
-
-Throughout the jam, we designed different scenarios and gameplay moments that matched the theme while keeping the experience fun and coherent. No AI was used in the creation process. Link: https://www.roblox.com/games/119841885626750/Shrek-7-Layers-Onion
+                    Built during a 48-hour game jam by a team of two, Jiejun and me, this project challenged us to create and launch a fully playable game from scratch in a Shrek-inspired universe. Our game, Shrek: 7 Layers Onion, went on to win Best Themed Game, reflecting both creative execution and strong technical problem-solving under pressure. Throughout the jam, we designed different scenarios and gameplay moments that matched the theme while keeping the experience fun and coherent. No AI was used in the creation process. Link: https://www.roblox.com/games/119841885626750/Shrek-7-Layers-Onion
                 </p>
-                <div class="hack-skills-label">// skills used</div>
                 <div class="hack-skills">
                     <span class="skill-tag">Game Dev</span>
                     <span class="skill-tag">Luau</span>
                     <span class="skill-tag">Roblox Studio</span>
                     <span class="skill-tag">Rapid Prototyping</span>
-                    <span class="skill-tag">UI implementation</span>
+                    <span class="skill-tag">UI Implementation</span>
                 </div>
             </div>
         </div>
         <!-- ══ END HACKATHON BLOCK ══ -->
 
-        <!-- Coming soon — delete once you add more hackathons -->
         <div class="coming-soon">
-            <span class="icon">👾</span>
-            More hackathons incoming...
+            <span class="icon">⚡</span>
+            More battles incoming — stay tuned.
         </div>
 
     </div>
