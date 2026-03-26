@@ -4,6 +4,70 @@
     <meta charset="UTF-8">
     <title>Juanita | AI & ML Engineer</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .home-main {
+            min-height: calc(100vh - 61px);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+            padding: 40px 80px;
+        }
+
+        .hero-image-container {
+            flex-shrink: 0;
+        }
+
+        .profile-img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center 20%;
+            border: 3px solid #ff79c6;
+            display: block;
+            box-shadow: 0 0 40px rgba(255, 121, 198, 0.5);
+            background-color: #0d1117;
+        }
+
+        .content {
+            text-align: left;
+            max-width: 700px;
+        }
+
+        .content h1 {
+            font-size: 4.5rem;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .content h2 {
+            font-size: 1.6rem;
+            color: #8b949e;
+            margin-bottom: 24px;
+        }
+
+        .content p {
+            font-size: 1.05rem;
+            color: #c9d1d9;
+            line-height: 1.9;
+            text-align: justify;
+        }
+
+        @media (max-width: 900px) {
+            .home-main {
+                flex-direction: column;
+                padding: 40px 24px;
+                gap: 30px;
+                text-align: center;
+            }
+            .content { text-align: center; }
+            .content p { text-align: justify; }
+            .profile-img { width: 220px; height: 220px; }
+            .content h1 { font-size: 3rem; }
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -20,17 +84,16 @@
     </nav>
 
     <main class="home-main">
-    <div class="hero-image-container">
-        <img src="./assets/images/projects/royal-portrait.jpg" alt="Your Majesty" class="profile-img">
-    </div>
-
-    <section class="content">
-        <h1>Juanita</h1>
-        <h2>AI & ML Engineer</h2>
-        <p>
-           Welcome to my digital portfolio. I am Juanita, a computer science student specializing in artificial intelligence, machine learning, and mathematics. I build technical expertise through hands-on projects, hackathons and active engagement in computer science events. I am president of the Quantum Computing Club Concordia and currently a member of SCS Concordia. 
-        </p>
-    </section>
-</main>
+        <div class="hero-image-container">
+            <img src="./assets/images/projects/royal-portrait.jpg" alt="Juanita" class="profile-img">
+        </div>
+        <section class="content">
+            <h1>Juanita</h1>
+            <h2>AI & ML Engineer</h2>
+            <p>
+               Welcome to my digital portfolio. I am Juanita, a computer science student specializing in artificial intelligence, machine learning, and mathematics. I build technical expertise through hands-on projects, hackathons and active engagement in computer science events. I am currently a member of SCS Concordia and president of the Quantum Computing Club Concordia. 
+            </p>
+        </section>
+    </main>
 </body>
 </html>
