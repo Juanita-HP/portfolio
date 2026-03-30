@@ -131,7 +131,6 @@
             padding: 22px 26px 24px;
         }
 
-        /* Row 1: name + date + RANK */
         .hack-top-row {
             display: flex;
             align-items: flex-start;
@@ -141,7 +140,6 @@
             margin-bottom: 8px;
         }
 
-        /* TITLE — enlarged for balance */
         .hack-name {
             font-size: 1.9rem;
             font-weight: 700;
@@ -184,7 +182,6 @@
         .rank-winner {
             background: linear-gradient(135deg, #b8860b, #ffd700, #b8860b);
             color: #000;
-            box-shadow: 0 0 14px rgba(255, 215, 0, 0.5);
             animation: glow-gold 2s ease-in-out infinite alternate;
         }
         @keyframes glow-gold {
@@ -194,7 +191,6 @@
         .rank-top3 {
             background: linear-gradient(135deg, #6a6a6a, #c0c0c0, #6a6a6a);
             color: #000;
-            box-shadow: 0 0 10px rgba(192,192,192,0.4);
         }
         .rank-finalist {
             background: rgba(188, 140, 255, 0.15);
@@ -207,7 +203,6 @@
             color: #8b949e;
         }
 
-        /* Organizer */
         .hack-organizer {
             font-size: 0.82rem;
             color: #39d5ff;
@@ -215,14 +210,12 @@
             opacity: 0.85;
         }
 
-        /* Divider */
         .hack-divider {
             height: 1px;
             background: linear-gradient(90deg, #39d5ff22, #7b5cfa22, transparent);
             margin: 14px 0;
         }
 
-        /* Description */
         .hack-desc {
             font-size: 0.9rem;
             color: #c9d1d9;
@@ -231,7 +224,6 @@
             margin-bottom: 20px;
         }
 
-        /* Skills — no label, just tags */
         .hack-skills {
             display: flex;
             flex-wrap: wrap;
@@ -252,7 +244,6 @@
             box-shadow: 0 0 8px rgba(57,213,255,0.3);
         }
 
-        /* Coming soon */
         .coming-soon {
             text-align: center;
             padding: 50px 20px;
@@ -286,29 +277,13 @@
         </ul>
     </nav>
 
-    <!-- PAGE HEADER -->
     <div class="hack-header">
         <h1>My hackathon journey</h1>
         <p class="subtitle">A collection of the hackathons that fuel my creativity and technical growth</p>
         <div class="glowing-line"></div>
     </div>
 
-    <!-- TIMELINE -->
     <div class="timeline">
-
-        <!-- ══════════════════════════════════════════════
-             HOW TO ADD A NEW HACKATHON:
-             1. Copy the entire hack-card block below
-             2. Paste it above this comment for the next one
-             3. Change the track id (track-1 → track-2, etc.)
-             4. Change the counter id to match (counter-track-2)
-             5. Update name, date, organizer, description, skills
-             6. Choose ONE rank-badge class:
-                - rank-winner     → 🏆 Winner
-                - rank-top3       → 🥈 Top 3
-                - rank-finalist   → 🎯 Finalist
-                - rank-participant → ⚡ Participant
-        ══════════════════════════════════════════════ -->
 
         <!-- HACKATHON 1 — SHREKATHON -->
         <div class="hack-card">
@@ -316,13 +291,16 @@
 
             <div class="hack-carousel">
                 <div class="hack-carousel-track" id="track-1">
-                    <img src="assets/images/hackathons/shrekathon-1.jpg" alt="Photo 1">
-                    <img src="assets/images/hackathons/shrekathon-2.jpg" alt="Photo 2">
-                    <img src="assets/images/hackathons/shrekathon-3.jpg" alt="Photo 3">
+                    <!-- 4 photos now matching exactly what's in your GitHub folder -->
+                    <img src="assets/images/hackathons/shrekathon-1.jpg" alt="Shrekathon Photo 1">
+                    <img src="assets/images/hackathons/shrekathon-2.jpg" alt="Shrekathon Photo 2">
+                    <img src="assets/images/hackathons/shrekathon-3.jpg" alt="Shrekathon Photo 3">
+                    <img src="assets/images/hackathons/shrekathon-4.jpg" alt="Shrekathon Photo 4">
                 </div>
                 <button class="carousel-btn prev hidden" onclick="slideHack('track-1', -1, this)">&#8592;</button>
                 <button class="carousel-btn next" onclick="slideHack('track-1', 1, this)">&#8594;</button>
-                <div class="carousel-counter" id="counter-track-1">1 / 3</div>
+                <!-- Updated counter to 1 / 4 -->
+                <div class="carousel-counter" id="counter-track-1">1 / 4</div>
             </div>
 
             <div class="hack-body">
@@ -336,7 +314,13 @@
                 <div class="hack-organizer">Organized by: Concordia Game Dev Club / Concordia University</div>
                 <div class="hack-divider"></div>
                 <p class="hack-desc">
-                    Built during a 48-hour game jam by a team of two, Jiejun and me, this project challenged us to create and launch a fully playable game from scratch in a Shrek-inspired universe. Our game, Shrek: 7 Layers Onion, went on to win Best Themed Game, reflecting both creative execution and strong technical problem-solving under pressure. Throughout the jam, we designed different scenarios and gameplay moments that matched the theme while keeping the experience fun and coherent. No AI was used in the creation process. Link: https://www.roblox.com/games/119841885626750/Shrek-7-Layers-Onion
+                    Built during a 48-hour game jam by a team of two, Jiejun and me, this project challenged
+                    us to create and launch a fully playable game from scratch in a Shrek-inspired universe.
+                    Our game, Shrek: 7 Layers Onion, went on to win Best Themed Game, reflecting both
+                    creative execution and strong technical problem-solving under pressure. Throughout the
+                    jam, we designed different scenarios and gameplay moments that matched the theme while
+                    keeping the experience fun and coherent. No AI was used in the creation process. Link:
+                    https://www.roblox.com/games/119841885626750/Shrek-7-Layers-Onion
                 </p>
                 <div class="hack-skills">
                     <span class="skill-tag">Game Dev</span>
@@ -347,11 +331,10 @@
                 </div>
             </div>
         </div>
-        <!-- ══ END HACKATHON BLOCK ══ -->
 
         <div class="coming-soon">
-            <span class="icon">👾</span>
-           More hackathons coming soon...
+            <span class="icon">⚡</span>
+            More battles incoming — stay tuned.
         </div>
 
     </div>
