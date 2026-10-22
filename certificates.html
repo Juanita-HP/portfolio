@@ -1,98 +1,392 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Certificates | Juanita</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Certificate links: preserve original design */
+
+        .cert-name.cert-link {
+            color: inherit;
+            font: inherit;
+            text-decoration: none;
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+        }
+
+        .cert-name.cert-link:hover {
+            opacity: 0.7;
+        }
+
+        .cert-name.cert-link:focus-visible {
+            outline: 2px solid currentColor;
+            outline-offset: 4px;
+            border-radius: 2px;
+        }
+    </style>
 </head>
+
 <body>
+
+    <!-- NAVIGATION -->
+
     <nav>
         <ul class="nav-links">
-            <li class="nav-item" style="--i:1"><a href="index.html" class="blue">Home</a></li>
-            <li class="nav-item" style="--i:2"><a href="projects.html" class="orange">Projects</a></li>
-            <li class="nav-item" style="--i:3"><a href="hackathons.html" class="cyan">Hackathons</a></li>
-            <li class="nav-item" style="--i:4"><a href="experience.html" class="green">Experience</a></li>
-            <li class="nav-item active" style="--i:5"><a href="certificates.html" class="purple">Certificates</a></li>
-            <li class="nav-item" style="--i:6"><a href="resume.html" class="pink">Resume</a></li>
-            <li class="nav-item" style="--i:7"><a href="https://github.com/Juanita-HP" target="_blank" class="red">GitHub</a></li>
-            <li class="nav-item" style="--i:8"><a href="https://www.linkedin.com/in/juana-v-h-679a68220/" target="_blank" class="yellow">LinkedIn</a></li>
+
+            <li class="nav-item" style="--i:1">
+                <a href="index.html" class="blue">Home</a>
+            </li>
+
+            <li class="nav-item" style="--i:2">
+                <a href="projects.html" class="orange">Projects</a>
+            </li>
+
+            <li class="nav-item" style="--i:3">
+                <a href="hackathons.html" class="cyan">Hackathons</a>
+            </li>
+
+            <li class="nav-item" style="--i:4">
+                <a href="experience.html" class="green">Experience</a>
+            </li>
+
+            <li class="nav-item active" style="--i:5">
+                <a href="certificates.html" class="purple">Certificates</a>
+            </li>
+
+            <li class="nav-item" style="--i:6">
+                <a href="resume.html" class="pink">Resume</a>
+            </li>
+
+            <li class="nav-item" style="--i:7">
+                <a href="https://github.com/Juanita-HP"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="red">GitHub</a>
+            </li>
+
+            <li class="nav-item" style="--i:8">
+                <a href="https://www.linkedin.com/in/juana-v-h-679a68220/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="yellow">LinkedIn</a>
+            </li>
+
         </ul>
     </nav>
 
+
     <main>
+
         <div class="cert-container fade-in">
-            <h1 class="cert-main-title">Certificates & Licences</h1>
+
+            <h1 class="cert-main-title">
+                Certificates & Licences
+            </h1>
+
+
+            <!-- BUSINESS MANAGEMENT -->
 
             <div class="year-section">
-                <h3 class="year-label">Business management</h3>
+
+                <h3 class="year-label">
+                    Business management
+                </h3>
+
                 <div class="cert-card border-purple">
-                    <div class="cert-header"><span class="cert-name">Project Managament</span><span class="cert-date">2026</span></div>
-                    <div class="cert-meta">Google (Coursera)</div>
-                    <div class="cert-badge bg-purple">Business manager</div>
-                    <p class="cert-desc">Developed skills in planning and managing projects, using Agile and Scrum frameworks, identifying risks, and collaborating with stakeholders to achieve project goals.</p>
+
+                    <div class="cert-header">
+
+                        <a href="diplomas/Project%20management.pdf"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="cert-name cert-link"
+                           title="View Project Management Certificate">
+                            Project Management
+                        </a>
+
+                        <span class="cert-date">2026</span>
+
+                    </div>
+
+                    <div class="cert-meta">
+                        Google (Coursera)
+                    </div>
+
+                    <div class="cert-badge bg-purple">
+                        Business manager
+                    </div>
+
+                    <p class="cert-desc">
+                        Developed skills in planning and managing
+                        projects, using Agile and Scrum frameworks,
+                        identifying risks, and collaborating with
+                        stakeholders to achieve project goals.
+                    </p>
+
                 </div>
+
             </div>
 
+
+            <!-- DATA SCIENCE -->
+
             <div class="year-section">
-                <h3 class="year-label">Data Science</h3>
+
+                <h3 class="year-label">
+                    Data Science
+                </h3>
+
                 <div class="cert-card border-green">
-                    <div class="cert-header"><span class="cert-name">IBM Data Science</span><span class="cert-date">2026</span></div>
-                    <div class="cert-meta"> IBM (Coursera)</div>
-                    <div class="cert-badge bg-green">Data Scientist</div>
-                    <p class="cert-desc">Built a strong foundation in analyzing and visualizing data using Jupyter Labs, exploring statistical models, and making data-driven predictions using Python, SQL, and Machine Learning techniques.</p>
+
+                    <div class="cert-header">
+
+                        <a href="diplomas/Data%20science.pdf"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="cert-name cert-link"
+                           title="View IBM Data Science Certificate">
+                            IBM Data Science
+                        </a>
+
+                        <span class="cert-date">2026</span>
+
+                    </div>
+
+                    <div class="cert-meta">
+                        IBM (Coursera)
+                    </div>
+
+                    <div class="cert-badge bg-green">
+                        Data Scientist
+                    </div>
+
+                    <p class="cert-desc">
+                        Built a strong foundation in analyzing
+                        and visualizing data using Jupyter Labs,
+                        exploring statistical models, and making
+                        data-driven predictions using Python,
+                        SQL, and Machine Learning techniques.
+                    </p>
+
                 </div>
+
             </div>
-            
-            <div class="year-section">
-                <h3 class="year-label"> AI and machine learning</h3>
-                <div class="cert-card border-blue">
-                    <div class="cert-header"><span class="cert-name">Machine Learning Specialization</span
-<a href="diplomas/Machine Learning.pdf"
-   target="_blank"
-   rel="noopener noreferrer"
-   class="cert-name cert-link">
-    Machine Learning Specialization ↗
-</a>
-<span class="cert-date">2026</span></div>
-                    <div class="cert-meta"> Standford University Online (Coursera)</div>
-                    <div class="cert-badge bg-blue">ML Engineer</div>
-                    <p class="cert-desc">Advanced my expertise in Machine Learning, mastering supervised and unsupervised learning, neural networks, and model optimization using Python, scikit-learn, and TensorFlow.</p>
-                </div>
-            </div>
-                <div class="cert-card border-blue">
-                    <div class="cert-header"><span class="cert-name">AI Basics</span><span class="cert-date">2026</span></div>
-                    <div class="cert-meta">BIA (Concordia University)</div>
-                    <div class="cert-badge bg-blue">AI Engineer</div>
-                    <p class="cert-desc">Applied knowledge of Deep Learning, Neural Networks, and AI Engineering.</p>
-                </div>
-            <div class="cert-card border-blue">
-                    <div class="cert-header"><span class="cert-name">AI Engineering</span><span class="cert-date">2026</span></div>
-                    <div class="cert-meta">IBM (Coursera)</div>
-                    <div class="cert-badge bg-blue">AI Engineer</div>
-                    <p class="cert-desc">Built and trained AI models using Python and Jupyter Notebooks, working with SQL, data schemas, scatter plots, pie charts, data visualization, neural networks, and deep learning frameworks like TensorFlow and PyTorch.</p>
-                </div>
-            
+
+
+            <!-- AI AND MACHINE LEARNING -->
 
             <div class="year-section">
-                <h3 class="year-label">Diplomas</h3>
-                <div class="cert-card border-red">
-                    <div class="cert-header"><span class="cert-name">BSc Computer Science</span><span class="cert-date">2025 - 2030</span></div>
-                    <div class="cert-meta">Concordia University</div>
-                    <div class="cert-badge bg-red">Scientist</div>
-                    <p class="cert-desc">Strong foundation in Programming, Software Engineering, Data Structures & Algorithms, Computer Systems, Artificial Intelligence, and Computational Mathematics.</p>
+
+                <h3 class="year-label">
+                    AI and machine learning
+                </h3>
+
+
+                <!-- STANFORD MACHINE LEARNING -->
+
+                <div class="cert-card border-blue">
+
+                    <div class="cert-header">
+
+                        <a href="diplomas/Machine%20Learning.pdf"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="cert-name cert-link"
+                           title="View Stanford Machine Learning Certificate">
+                            Machine Learning Specialization
+                        </a>
+
+                        <span class="cert-date">2026</span>
+
+                    </div>
+
+                    <div class="cert-meta">
+                        Stanford University Online (Coursera)
+                    </div>
+
+                    <div class="cert-badge bg-blue">
+                        ML Engineer
+                    </div>
+
+                    <p class="cert-desc">
+                        Advanced my expertise in Machine Learning,
+                        mastering supervised and unsupervised
+                        learning, neural networks, and model
+                        optimization using Python, scikit-learn,
+                        and TensorFlow.
+                    </p>
+
                 </div>
-                <div class="cert-card border-yellow">
-                    <div class="cert-header"><span class="cert-name">DEC in Business Management</span><span class="cert-date">2021 - 2024</span></div>
-                    <div class="cert-meta">Cégep Édouard-Montpetit</div>
-                    <div class="cert-badge bg-yellow">Business Manager</div>
-                    <p class="cert-desc">Strong foundation in Business Administration, Accounting, Financial Management, Sales, Marketing, Business Law, and Strategic Planning.</p>
+
+
+                <!-- CONCORDIA AI BASICS -->
+
+                <div class="cert-card border-blue">
+
+                    <div class="cert-header">
+
+                        <a href="diplomas/AI%20Basics.pdf"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="cert-name cert-link"
+                           title="View AI Basics Certificate">
+                            AI Basics
+                        </a>
+
+                        <span class="cert-date">2026</span>
+
+                    </div>
+
+                    <div class="cert-meta">
+                        BIA (Concordia University)
+                    </div>
+
+                    <div class="cert-badge bg-blue">
+                        AI Engineer
+                    </div>
+
+                    <p class="cert-desc">
+                        Applied knowledge of Deep Learning,
+                        Neural Networks, and AI Engineering.
+                    </p>
+
                 </div>
+
+
+                <!-- IBM AI ENGINEERING -->
+
+                <div class="cert-card border-blue">
+
+                    <div class="cert-header">
+
+                        <a href="diplomas/AI%20engineering.pdf"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="cert-name cert-link"
+                           title="View IBM AI Engineering Certificate">
+                            AI Engineering
+                        </a>
+
+                        <span class="cert-date">2026</span>
+
+                    </div>
+
+                    <div class="cert-meta">
+                        IBM (Coursera)
+                    </div>
+
+                    <div class="cert-badge bg-blue">
+                        AI Engineer
+                    </div>
+
+                    <p class="cert-desc">
+                        Built and trained AI models using Python
+                        and Jupyter Notebooks, working with SQL,
+                        data schemas, scatter plots, pie charts,
+                        data visualization, neural networks,
+                        and deep learning frameworks like
+                        TensorFlow and PyTorch.
+                    </p>
+
+                </div>
+
             </div>
+
+
+            <!-- DIPLOMAS -->
+
+            <div class="year-section">
+
+                <h3 class="year-label">
+                    Diplomas
+                </h3>
+
+
+                <!-- COMPUTER SCIENCE DEGREE -->
+
+                <div class="cert-card border-red">
+
+                    <div class="cert-header">
+
+                        <span class="cert-name">
+                            BSc Computer Science
+                        </span>
+
+                        <span class="cert-date">
+                            2025 - 2030
+                        </span>
+
+                    </div>
+
+                    <div class="cert-meta">
+                        Concordia University
+                    </div>
+
+                    <div class="cert-badge bg-red">
+                        Scientist
+                    </div>
+
+                    <p class="cert-desc">
+                        Strong foundation in Programming,
+                        Software Engineering, Data Structures
+                        &amp; Algorithms, Computer Systems,
+                        Artificial Intelligence, and
+                        Computational Mathematics.
+                    </p>
+
+                </div>
+
+
+                <!-- BUSINESS MANAGEMENT DEC -->
+
+                <div class="cert-card border-yellow">
+
+                    <div class="cert-header">
+
+                        <span class="cert-name">
+                            DEC in Business Management
+                        </span>
+
+                        <span class="cert-date">
+                            2021 - 2024
+                        </span>
+
+                    </div>
+
+                    <div class="cert-meta">
+                        Cégep Édouard-Montpetit
+                    </div>
+
+                    <div class="cert-badge bg-yellow">
+                        Business Manager
+                    </div>
+
+                    <p class="cert-desc">
+                        Strong foundation in Business
+                        Administration, Accounting,
+                        Financial Management, Sales,
+                        Marketing, Business Law,
+                        and Strategic Planning.
+                    </p>
+
+                </div>
+
+            </div>
+
         </div>
+
     </main>
+
 </body>
 </html>
