@@ -281,19 +281,21 @@ nav {
     font-size: 0.8rem;
     color: #A5A7A9;
 }
+
+/* --- Profile Photo: Elegant Rectangle --- */
 .profile-img {
-    width: 280px;  /* Slightly larger for better presence */
-    height: 280px;
-    border-radius: 50%;
-    /* 'object-position' allows us to move the photo down or up inside the circle */
-    object-fit: cover; 
-    object-position: center 20%; /* Adjusts the crop to show more of the top/face */
-    border: 3px solid #CACCCD;
+    width: 300px;
+    height: 380px;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: center 20%;
+    border: 2px solid #D0D1D2;
     display: block;
     margin: 20px auto;
-    box-shadow: 0 0 25px rgba(202, 204, 205, 0.4);
-    background-color: #17191B; /* Adds a dark background if the photo has edges */
+    box-shadow: 0 0 30px rgba(208, 209, 210, 0.22);
+    background-color: #17191B;
 }
+
 /* --- Royal Project Refinements --- */
 
 /* Centered Header Band for Projects */
@@ -325,7 +327,7 @@ nav {
 }
 
 .dot.active {
-    background-color: #C1C3C5; /* Your signature orange */
+    background-color: #C1C3C5;
 }
 
 /* Justified Description Text */
@@ -345,10 +347,11 @@ nav {
     margin-top: 8px;
     letter-spacing: 0.5px;
 }
+
 /* --- Unified Royal Headings --- */
 .royal-heading {
     font-size: 2.5rem; 
-    color: #CFD1D2;    /* Royal Purple */
+    color: #CFD1D2;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -370,6 +373,7 @@ nav {
     gap: 20px;
     padding: 20px;
 }
+
 /* Core Reset */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
