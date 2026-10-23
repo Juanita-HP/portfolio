@@ -53,7 +53,6 @@
         .profile-img {
             width: 300px;
             height: 380px;
-
             max-width: 100%;
 
             border-radius: 16px;
@@ -84,7 +83,6 @@
 
             margin-bottom: 8px;
             line-height: 1.2;
-
             text-align: left;
         }
 
@@ -94,7 +92,6 @@
 
             margin-bottom: 24px;
             line-height: 1.5;
-
             text-align: left;
         }
 
@@ -138,7 +135,6 @@
                 font-size: 0.95rem;
                 line-height: 1.8;
             }
-
         }
 
 
@@ -157,7 +153,6 @@
                 justify-content: flex-start;
 
                 gap: 30px;
-
                 padding: 45px 24px 65px;
 
                 width: 100%;
@@ -172,11 +167,9 @@
             .profile-img {
                 width: 220px;
                 height: 280px;
-
                 max-width: 100%;
 
                 border-radius: 14px;
-
                 border: 2px solid #D0D1D2;
 
                 object-fit: cover;
@@ -190,10 +183,12 @@
 
             .content {
                 width: 100%;
-                max-width: 540px;
+                max-width: 440px;
 
                 flex: none;
 
+                padding: 0 4px;
+                margin: 0 auto;
                 text-align: left;
             }
 
@@ -204,7 +199,6 @@
                 margin-bottom: 12px;
 
                 text-align: center;
-
                 overflow-wrap: normal;
             }
 
@@ -218,22 +212,21 @@
             }
 
             .content p {
-                font-size: 0.92rem;
-
-                line-height: 1.8;
+                font-size: 0.9rem;
+                line-height: 1.85;
 
                 text-align: left;
-                text-justify: auto;
+                text-align-last: auto;
 
                 max-width: 100%;
+                margin: 0 auto;
 
-                margin: 0;
-
-                overflow-wrap: break-word;
                 word-spacing: normal;
-                letter-spacing: normal;
-            }
+                letter-spacing: -0.2px;
 
+                hyphens: none;
+                overflow-wrap: break-word;
+            }
         }
 
 
@@ -263,7 +256,105 @@
                 font-size: 0.87rem;
                 line-height: 1.75;
             }
+        }
 
+
+        /* =====================================
+           RESPONSIVE NAVIGATION
+           Homepage only
+           ===================================== */
+
+        @media screen and (max-width: 900px) {
+
+            body nav {
+                width: 100%;
+                max-width: 100%;
+                padding: 12px 18px;
+                overflow: hidden;
+                box-sizing: border-box;
+            }
+
+            body nav .nav-links {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+
+                justify-content: flex-start;
+                align-items: center;
+
+                gap: 28px;
+
+                width: 100%;
+                max-width: 100%;
+
+                padding: 8px 0 12px;
+                margin: 0;
+
+                overflow-x: auto;
+                overflow-y: hidden;
+
+                scrollbar-width: none;
+                -webkit-overflow-scrolling: touch;
+
+                list-style: none;
+            }
+
+            body nav .nav-links::-webkit-scrollbar {
+                display: none;
+            }
+
+            body nav .nav-links .nav-item {
+                display: block;
+
+                flex: 0 0 auto;
+                flex-shrink: 0;
+
+                white-space: nowrap;
+
+                margin: 0;
+                padding: 0;
+            }
+
+            body nav .nav-links .nav-item a {
+                display: inline-block;
+
+                white-space: nowrap;
+                font-size: 0.85rem;
+                line-height: 1.5;
+
+                padding: 4px 2px;
+                text-decoration: none;
+            }
+
+            body nav .nav-links .nav-item.active a::after {
+                bottom: -4px;
+                height: 2px;
+            }
+        }
+
+
+        /* ===== SMALL PHONE NAVIGATION ===== */
+
+        @media screen and (max-width: 380px) {
+
+            body nav {
+                padding: 12px 14px;
+            }
+
+            body nav .nav-links {
+                gap: 22px;
+            }
+
+            body nav .nav-links .nav-item a {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Prevent automatic mobile text enlargement */
+
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
         }
 
     </style>
@@ -279,38 +370,44 @@
         <ul class="nav-links">
 
             <li class="nav-item active">
-                <a href="index.html" class="blue"
+                <a href="index.html"
+                   class="blue"
                    aria-current="page">
                     Home
                 </a>
             </li>
 
             <li class="nav-item">
-                <a href="projects.html" class="orange">
+                <a href="projects.html"
+                   class="orange">
                     Projects
                 </a>
             </li>
 
             <li class="nav-item">
-                <a href="hackathons.html" class="cyan">
+                <a href="hackathons.html"
+                   class="cyan">
                     Hackathons
                 </a>
             </li>
 
             <li class="nav-item">
-                <a href="experience.html" class="green">
+                <a href="experience.html"
+                   class="green">
                     Experience
                 </a>
             </li>
 
             <li class="nav-item">
-                <a href="certificates.html" class="purple">
+                <a href="certificates.html"
+                   class="purple">
                     Certificates
                 </a>
             </li>
 
             <li class="nav-item">
-                <a href="resume.html" class="pink">
+                <a href="resume.html"
+                   class="pink">
                     Resume
                 </a>
             </li>
