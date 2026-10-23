@@ -1,9 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juanita HP | Aspiring AI & ML engineer</title>
     <link rel="stylesheet" href="styles.css">
+
     <style>
         .home-main {
             min-height: calc(100vh - 61px);
@@ -19,16 +22,17 @@
             flex-shrink: 0;
         }
 
+        /* Rectangular profile photograph */
         .profile-img {
             width: 300px;
-            height: 300px;
-            border-radius: 50%;
+            height: 380px;
+            border-radius: 16px;
             object-fit: cover;
             object-position: center 20%;
-            border: 3px solid #ff79c6;
+            border: 2px solid #D0D1D2;
             display: block;
-            box-shadow: 0 0 40px rgba(255, 121, 198, 0.5);
-            background-color: #0d1117;
+            box-shadow: 0 0 25px rgba(208, 209, 210, 0.20);
+            background-color: #17191B;
         }
 
         .content {
@@ -38,23 +42,24 @@
 
         .content h1 {
             font-size: 4.5rem;
-            color: #fff;
+            color: #F5F5F5;
             margin-bottom: 8px;
         }
 
         .content h2 {
             font-size: 1.6rem;
-            color: #8b949e;
+            color: #A5A7A9;
             margin-bottom: 24px;
         }
 
         .content p {
             font-size: 1.05rem;
-            color: #c9d1d9;
+            color: #D0D1D2;
             line-height: 1.9;
             text-align: justify;
         }
 
+        /* Mobile layout */
         @media (max-width: 900px) {
             .home-main {
                 flex-direction: column;
@@ -62,39 +67,102 @@
                 gap: 30px;
                 text-align: center;
             }
-            .content { text-align: center; }
-            .content p { text-align: justify; }
-            .profile-img { width: 220px; height: 220px; }
-            .content h1 { font-size: 3rem; }
+
+            .content {
+                text-align: center;
+            }
+
+            .content p {
+                text-align: justify;
+            }
+
+            .profile-img {
+                width: 220px;
+                height: 280px;
+            }
+
+            .content h1 {
+                font-size: 3rem;
+            }
         }
     </style>
 </head>
+
 <body>
+
     <nav>
         <ul class="nav-links">
-            <li class="nav-item active"><a href="index.html" class="blue">Home</a></li>
-            <li class="nav-item"><a href="projects.html" class="orange">Projects</a></li>
-            <li class="nav-item"><a href="hackathons.html" class="cyan">Hackathons</a></li>
-            <li class="nav-item"><a href="experience.html" class="green">Experience</a></li>
-            <li class="nav-item"><a href="certificates.html" class="purple">Certificates</a></li>
-            <li class="nav-item"><a href="resume.html" class="pink">Resume</a></li>
-            <li class="nav-item"><a href="https://github.com/Juanita-HP" target="_blank" class="red">GitHub</a></li>
-            <li class="nav-item"><a href="https://www.linkedin.com/in/juana-v-h-679a68220/" target="_blank" class="yellow">LinkedIn</a></li>
+            <li class="nav-item active">
+                <a href="index.html" class="blue">Home</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="projects.html" class="orange">Projects</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="hackathons.html" class="cyan">Hackathons</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="experience.html" class="green">Experience</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="certificates.html" class="purple">Certificates</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="resume.html" class="pink">Resume</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="https://github.com/Juanita-HP"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="red">GitHub</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="https://www.linkedin.com/in/juana-v-h-679a68220/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="yellow">LinkedIn</a>
+            </li>
         </ul>
     </nav>
 
     <main class="home-main">
+
         <div class="hero-image-container">
-            <img src="./assets/images/projects/224359.jpeg" alt="Juanita" class="profile-img">
+            <img
+                src="./assets/images/projects/224359.jpeg"
+                alt="Juanita"
+                class="profile-img"
+            >
         </div>
+
         <section class="content">
+
             <h1>Juanita HP</h1>
+
             <h2>Aspiring AI & ML Engineer</h2>
+
             <p>
-               <p>
-Welcome to my digital portfolio. I am Juanita, a Business Management graduate and a Computer Science student at Concordia University specializing in artificial intelligence, machine learning, and mathematics. My work is centered on the creation of intelligent systems, strategic technologies, and data-driven solutions. I serve as President of the Quantum Computing & AI Society at Concordia. 
-</p>
+                Welcome to my digital portfolio. I am Juanita,
+                a Business Management graduate and a Computer
+                Science student at Concordia University
+                specializing in artificial intelligence,
+                machine learning, and mathematics.
+                My work is centered on the creation of
+                intelligent systems, strategic technologies,
+                and data-driven solutions. I serve as President
+                of the Quantum Computing & AI Society at Concordia.
+            </p>
+
         </section>
+
     </main>
+
 </body>
 </html>
