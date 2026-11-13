@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,17 +19,17 @@
             font-size: 3rem;
             color: #fff;
             font-weight: 700;
-            text-shadow: 0 0 30px rgba(57, 213, 255, 0.35);
+            text-shadow: none;
         }
         .hack-header .subtitle {
-            color: #8b949e;
+            color: #A5A7A9;
             font-size: 0.9rem;
             margin-top: 10px;
         }
         .glowing-line {
             width: 80px;
             height: 2px;
-            background: linear-gradient(90deg, transparent, #39d5ff, transparent);
+            background: linear-gradient(90deg, transparent, #777B7F, transparent);
             margin: 14px auto 0;
         }
 
@@ -39,8 +40,8 @@
         }
 
         .hack-card {
-            background: #0d1117;
-            border: 1px solid #21262d;
+            background: #242629;
+            border: 1px solid #43474B;
             border-radius: 14px;
             margin-bottom: 50px;
             overflow: hidden;
@@ -48,13 +49,13 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.3);
         }
         .hack-card:hover {
-            box-shadow: 0 0 35px rgba(57, 213, 255, 0.18);
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.32);
             transform: translateY(-4px);
         }
 
         .hack-accent-bar {
             height: 3px;
-            background: linear-gradient(90deg, #39d5ff, #7b5cfa, #39d5ff);
+            background: linear-gradient(90deg, #43474B, #777B7F, #43474B);
             background-size: 200% 100%;
             animation: shimmer 3s linear infinite;
         }
@@ -65,7 +66,7 @@
 
         .hack-carousel {
             position: relative;
-            background: #010409;
+            background: #17191B;
             overflow: hidden;
         }
         .hack-carousel-track {
@@ -84,9 +85,9 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background: rgba(13, 17, 23, 0.85);
-            border: 1px solid #39d5ff55;
-            color: #39d5ff;
+            background: rgba(36, 38, 41, 0.85);
+            border: 1px solid #777B7F;
+            color: #D0D1D2;
             width: 38px;
             height: 38px;
             border-radius: 50%;
@@ -99,9 +100,9 @@
             justify-content: center;
         }
         .carousel-btn:hover {
-            background: rgba(57, 213, 255, 0.15);
-            border-color: #39d5ff;
-            box-shadow: 0 0 12px rgba(57,213,255,0.5);
+            background: rgba(119, 123, 127, 0.20);
+            border-color: #A5A7A9;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
         }
         .carousel-btn.prev { left: 12px; }
         .carousel-btn.next { right: 12px; }
@@ -111,8 +112,8 @@
             position: absolute;
             bottom: 10px;
             right: 14px;
-            background: rgba(0,0,0,0.75);
-            color: #39d5ff;
+            background: rgba(23, 25, 27, 0.85);
+            color: #D0D1D2;
             font-size: 0.7rem;
             padding: 3px 10px;
             border-radius: 10px;
@@ -150,9 +151,9 @@
 
         .hack-date-badge {
             font-size: 0.7rem;
-            background: rgba(57, 213, 255, 0.08);
-            border: 1px solid #39d5ff44;
-            color: #39d5ff;
+            background: #34373B;
+            border: 1px solid #43474B;
+            color: #D0D1D2;
             padding: 4px 12px;
             border-radius: 20px;
             letter-spacing: 1px;
@@ -172,45 +173,45 @@
             gap: 5px;
         }
         .rank-winner {
-            background: linear-gradient(135deg, #b8860b, #ffd700, #b8860b);
-            color: #000;
+            background: linear-gradient(135deg, #505459, #777B7F, #505459);
+            color: #F5F5F5;
             animation: glow-gold 2s ease-in-out infinite alternate;
         }
         @keyframes glow-gold {
-            from { box-shadow: 0 0 8px rgba(255,215,0,0.4); }
-            to   { box-shadow: 0 0 20px rgba(255,215,0,0.8); }
+            from { box-shadow: 0 0 8px rgba(165,167,169,0.12); }
+            to   { box-shadow: 0 0 20px rgba(165,167,169,0.25); }
         }
         .rank-top3 {
-            background: linear-gradient(135deg, #6a6a6a, #c0c0c0, #6a6a6a);
-            color: #000;
+            background: linear-gradient(135deg, #43474B, #777B7F, #43474B);
+            color: #F5F5F5;
         }
         .rank-finalist {
-            background: rgba(188, 140, 255, 0.15);
-            border: 1px solid #bc8cff88;
-            color: #bc8cff;
+            background: #34373B;
+            border: 1px solid #43474B;
+            color: #D0D1D2;
         }
         .rank-participant {
-            background: rgba(139, 148, 158, 0.1);
-            border: 1px solid #8b949e44;
-            color: #8b949e;
+            background: #34373B;
+            border: 1px solid #43474B;
+            color: #A5A7A9;
         }
 
         .hack-organizer {
             font-size: 0.82rem;
-            color: #39d5ff;
+            color: #D0D1D2;
             margin-bottom: 14px;
             opacity: 0.85;
         }
 
         .hack-divider {
             height: 1px;
-            background: linear-gradient(90deg, #39d5ff22, #7b5cfa22, transparent);
+            background: linear-gradient(90deg, #43474B, #43474B, transparent);
             margin: 14px 0;
         }
 
         .hack-desc {
             font-size: 0.9rem;
-            color: #c9d1d9;
+            color: #D0D1D2;
             line-height: 1.75;
             text-align: justify;
             margin-bottom: 20px;
@@ -222,26 +223,26 @@
             gap: 7px;
         }
         .skill-tag {
-            background: rgba(57, 213, 255, 0.07);
-            border: 1px solid rgba(57, 213, 255, 0.25);
-            color: #39d5ff;
+            background: #34373B;
+            border: 1px solid #43474B;
+            color: #D0D1D2;
             font-size: 0.75rem;
             padding: 4px 13px;
-            border-radius: 4px;
+            border-radius: 20px;
             font-weight: 600;
             transition: all 0.2s ease;
         }
         .skill-tag:hover {
-            background: rgba(57, 213, 255, 0.18);
-            box-shadow: 0 0 8px rgba(57,213,255,0.3);
+            background: #3E4246;
+            box-shadow: none;
         }
 
         .coming-soon {
             text-align: center;
             padding: 50px 20px;
-            color: #484f58;
+            color: #A5A7A9;
             font-size: 0.85rem;
-            border: 1px dashed #21262d;
+            border: 1px dashed #43474B;
             border-radius: 12px;
         }
         .coming-soon .icon { font-size: 2.5rem; display: block; margin-bottom: 10px; }
