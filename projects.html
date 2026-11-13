@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,6 +41,53 @@
     </nav>
 
     <main class="projects-container">
+
+        <!-- CYBERGUARD AI -->
+        <div class="project-card">
+            <div class="project-header">CyberGuard AI</div>
+
+            <div class="image-carousel" id="carousel-3">
+                <img src="https://raw.githubusercontent.com/Juanita-HP/cyberguard-ai/main/Images/cyberguard_scrumban_board.png" alt="CyberGuard AI Scrumban board">
+                <img src="https://raw.githubusercontent.com/Juanita-HP/cyberguard-ai/main/Images/cyberguard_vscode_pipeline.png" alt="Python Machine Learning pipeline in VS Code">
+                <img src="https://raw.githubusercontent.com/Juanita-HP/cyberguard-ai/main/assets/eda/class_distribution.png" alt="Network traffic class distribution">
+                <img src="https://raw.githubusercontent.com/Juanita-HP/cyberguard-ai/main/assets/eda/correlation_matrix.png" alt="Numerical feature correlation matrix">
+                <img src="https://raw.githubusercontent.com/Juanita-HP/cyberguard-ai/main/assets/model_evaluation/feature_importance.png" alt="Random Forest feature importance">
+                <img src="https://raw.githubusercontent.com/Juanita-HP/cyberguard-ai/main/assets/model_evaluation/validation_confusion_matrix.png" alt="Validation confusion matrix">
+                <img src="https://raw.githubusercontent.com/Juanita-HP/cyberguard-ai/main/assets/model_evaluation/validation_roc_curve.png" alt="Validation ROC curve">
+            </div>
+
+            <div class="dots-container" id="dots-3">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+
+            <div class="project-content">
+                <div class="tag-container">
+                    <span class="tag">Python</span>
+                    <span class="tag">pandas</span>
+                    <span class="tag">NumPy</span>
+                    <span class="tag">scikit-learn</span>
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">Data Visualization</span>
+                    <span class="tag">Scrumban</span>
+                    <span class="tag">GitHub Projects</span>
+                </div>
+                <div class="project-date">NOVEMBER 12, 2026</div>
+                <p class="project-description">
+                    Developed an end-to-end supervised Machine Learning pipeline for binary network intrusion classification using the UNSW-NB15 dataset. Implemented data quality auditing, EDA, group-aware validation, One-Hot Encoding, and Random Forest classification against a DummyClassifier baseline. Achieved a 91.85% F1-score and 97.11% malicious-class recall on the official historical test dataset, while documenting duplicate observations, train/test overlap, and evaluation limitations.
+                </p>
+                <p>
+                    <a href="https://github.com/Juanita-HP/cyberguard-ai" target="_blank" rel="noopener noreferrer" style="color: #D0D1D2; text-decoration: underline; font-weight: 600;">
+                        View Project on GitHub
+                    </a>
+                </p>
+            </div>
+        </div>
 
         <!-- PROJECT 1 -->
         <div class="project-card">
@@ -126,6 +174,7 @@
 
         initCarousel('carousel-1', 'dots-1');
         initCarousel('carousel-2', 'dots-2');
+        initCarousel('carousel-3', 'dots-3');
     </script>
 </body>
 </html>
