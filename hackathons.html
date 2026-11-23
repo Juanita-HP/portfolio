@@ -280,9 +280,14 @@
         <div class="hack-card">
             <div class="hack-accent-bar"></div>
 
-            <!-- Image carousel will be added when event photographs are supplied. -->
-            <div class="hack-carousel" style="min-height: 190px; display: flex; align-items: center; justify-content: center;">
-                <p style="color: #A5A7A9; font-size: 0.85rem; text-align: center; padding: 24px;">Datathon 2026 photos coming soon</p>
+            <div class="hack-carousel">
+                <div class="hack-carousel-track" id="track-4">
+                    <img src="assets/images/hackathons/datathon-event.jpg" alt="Datathon 2026 event artwork featuring National Bank of Canada and AWS">
+                    <img src="assets/images/hackathons/datathon-data-analysis.jpg" alt="WealthPilot data analysis and technical documentation in Jupyter Notebook">
+                </div>
+                <button class="carousel-btn prev hidden" onclick="slideHack('track-4', -1, this)" aria-label="Previous Datathon image">&#8592;</button>
+                <button class="carousel-btn next" onclick="slideHack('track-4', 1, this)" aria-label="Next Datathon image">&#8594;</button>
+                <div class="carousel-counter" id="counter-track-4">1 / 2</div>
             </div>
 
             <div class="hack-body">
